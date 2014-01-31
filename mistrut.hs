@@ -23,4 +23,4 @@ main = do
   let parsedCsv = decode NoHeader input :: Either String (V.Vector (V.Vector BLC.ByteString))
   case parsedCsv of
     Left err -> putStrLn err
-    Right v ->  putStrLn $ "There are " ++ show (V.length v) ++ " columns in " ++ show filename
+    Right v ->  putStrLn $ "There are " ++ show (V.length v) ++ " rows in " ++ show filename
